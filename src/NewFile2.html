@@ -1,0 +1,1478 @@
+<div class="container">
+	<div role="tabpanel" class="inner-coding-area tab-pane active"
+		id="domain-problem">
+		<div id="full-screen-question">
+			<div id="question-area">
+				<h1>Prison Escape</h1>
+				<article class="post">
+					<font size="3" face="Calibri,Arial,Helvetica,sans-serif"
+						color="black"><span style="font-size: 12pt;"
+						id="divtagdefaultwrapper"><font size="2"
+							face="Calibri,sans-serif"><span style="font-size: 11pt;"><font
+									size="2" face="Helvetica,sans-serif"><span
+										style="font-size: 10.5pt;" lang="en-US">A group of N
+											people are locked in N cells of a prison and are looking to
+											escape. These people can send messages to each other via a
+											messaging device only if they know each other. For transfer
+											of any message from receiver to sender it takes 1 unit of
+											time. To escape prison a secret number needs to be entered in
+											dial lock of 3 of the cells. One of the member A is somehow
+											able to find the secret number to be entered and also the
+											cell locations B C &amp; D from where this number needs to be
+											dialed. Find the minimum time it would take for them to
+											escape.<br>
+										<br>
+										<br>
+										<b>Input Format</b><br>You will be given a function which
+											contains following arguments - <br>
+									</span></font></span></font></span></font><font size="3" face="Calibri,Arial,Helvetica,sans-serif"
+						color="black"><span style="font-size: 12pt;"
+						id="divtagdefaultwrapper"><div style="margin: 0;">
+								<font size="2" face="Calibri,sans-serif"><span
+									style="font-size: 11pt;"><font size="2"
+										face="Helvetica,sans-serif"><span
+											style="font-size: 10.5pt;" lang="en-US">N - no of
+												people</span></font></span></font>
+							</div>
+							<div style="margin: 0;">
+								<font size="2" face="Calibri,sans-serif"><span
+									style="font-size: 11pt;"><font size="2"
+										face="Helvetica,sans-serif"><span
+											style="font-size: 10.5pt;" lang="en-US">A - index of
+												person knowing secret number</span></font></span></font>
+							</div>
+							<div style="margin: 0;">
+								<font size="2" face="Calibri,sans-serif"><span
+									style="font-size: 11pt;"><font size="2"
+										face="Helvetica,sans-serif"><span
+											style="font-size: 10.5pt;" lang="en-US">B C D - array
+												of index of person who need to receive this secret number</span></font></span></font>
+							</div>
+							<div style="margin: 0;">
+								<font size="2" face="Calibri,sans-serif"><span
+									style="font-size: 11pt;"><font size="2"
+										face="Helvetica,sans-serif"><span
+											style="font-size: 10.5pt;" lang="en-US">p1 - p1 , p2
+												p2 array of strings where each string represents the friend
+												pair who know each-other.<br>
+											<br>
+											<b>Output Format</b><br>You need to return
+										</span></font></span></font><font size="3" face="Calibri,Arial,Helvetica,sans-serif"
+									color="black"><span style="font-size: 12pt;"
+									id="divtagdefaultwrapper"><font size="2"
+										face="Calibri,sans-serif"><span
+											style="font-size: 11pt;"><font size="2"
+												face="Helvetica,sans-serif"><span
+													style="font-size: 10.5pt;" lang="en-US">time T to
+														escape from the given function if possible otherwise -1.<br>
+													<br>
+													<br>
+													<b>Sample Test Case</b><br>
+													<i>Sample Input</i><br>
+												</span></font></span></font></span></font><font size="3" face="Calibri,Arial,Helvetica,sans-serif"
+									color="black"><span style="font-size: 12pt;"
+									id="divtagdefaultwrapper"><font size="2"
+										face="Calibri,sans-serif"><span
+											style="font-size: 11pt;"><font size="2"
+												face="Helvetica,sans-serif"><span
+													style="font-size: 10.5pt;" lang="en-US">5<br>4<br>3<br>1<br>2<br>3<br>5<br>3
+														2<br>2 4<br>2 5<br>4 5<br>1 5<br>
+													<i><br>Sample Output</i><br>2<br>
+													<br>
+													<b>Explanation</b><br></span></font></span></font></span></font><font size="3"
+									face="Calibri,Arial,Helvetica,sans-serif" color="black"><span
+									style="font-size: 12pt;" id="divtagdefaultwrapper"><div
+											style="margin: 0;">
+											<font size="2" face="Calibri,sans-serif"><span
+												style="font-size: 11pt;"><font size="2"
+													face="Helvetica,sans-serif"><span
+														style="font-size: 10.5pt;" lang="en-US">Here
+															message should start from 4 and has to reach 1, 2 and 3.
+													</span></font></span></font>
+										</div>
+										<div style="margin: 0;">
+											<font size="2" face="Calibri,sans-serif"><span
+												style="font-size: 11pt;"><font size="2"
+													face="Helvetica,sans-serif"><span
+														style="font-size: 10.5pt;" lang="en-US">For message
+															to reach 1 it takes 4-&gt;5, 5-&gt;1 hence time taken is
+															2</span></font></span></font>
+										</div>
+										<div style="margin: 0;">
+											<font size="2" face="Calibri,sans-serif"><span
+												style="font-size: 11pt;"><font size="2"
+													face="Helvetica,sans-serif"><span
+														style="font-size: 10.5pt;" lang="en-US">for 2 it
+															takes 4-&gt;2 and time taken is 1</span></font></span></font>
+										</div>
+										<div style="margin: 0;">
+											<font size="2" face="Calibri,sans-serif"><span
+												style="font-size: 11pt;"><font size="2"
+													face="Helvetica,sans-serif"><span
+														style="font-size: 10.5pt;" lang="en-US">for 3 it
+															takes 4-&gt;2, 2-&gt;3 and time taken is 2</span></font></span></font>
+										</div>
+										<div style="margin: 0;">
+											<font size="2" face="Calibri,sans-serif"><span
+												style="font-size: 11pt;"><font size="2"
+													face="Helvetica,sans-serif"><span
+														style="font-size: 10.5pt;" lang="en-US">so the
+															earliest time to escape is 2. </span></font></span></font>
+										</div></span></font>
+							</div></span></font>
+					<p class="clearfix">
+						<a class="pull-right"
+							href="https://www.techgig.com/recruit/tests/info/interface?tab=sample-poroblem-statement"
+							target="_blank">Sample Problem with Solution</a>
+					</p>
+				</article>
+			</div>
+			<div id="editor-box" class="clearfix">
+				<header class="clearfix">
+					<div class="user-actions clearfix">
+						<button evaluationtype="2" question_id="78344"
+							class="btn button6 pull-left btn-sx set-original-code"
+							style="margin-top: -5px; margin-right: 10px;">Default
+							Code</button>
+						<p class="clearfix form1 pull-left">
+							<span class="select pull-right" style="width: 150px;"> <select
+								id="modeSelect" class="change-language-confirmation-testcase"
+								style="color: rgb(85, 85, 85);">
+									<option evaluationtype="2" lang_id="2" question_id="78344"
+										value="cpp" selected="">C++ ( g++ 4.9.2 )</option>
+									<option evaluationtype="2" lang_id="4" question_id="78344"
+										value="java">Java ( java 1.7.0_80 )</option>
+									<option evaluationtype="2" lang_id="28" question_id="78344"
+										value="java8">Java 8 ( 1.8.0_45 )</option>
+									<option evaluationtype="2" lang_id="7" question_id="78344"
+										value="python">Python ( python 2.7.6 )</option>
+									<option evaluationtype="2" lang_id="29" question_id="78344"
+										value="python3">Python 3 ( Python 3.4.0 )</option>
+									<option evaluationtype="2" lang_id="34" question_id="78344"
+										value="nodejs">Node Js ( v5.4.1 )</option>
+							</select>
+							</span>
+						</p>
+						<a href="javascript:void(0);" id="downloadUserCode"
+							class="download-btn" data-toggle="tooltip" data-placement="top"
+							title="" data-original-title="Download"><i
+							class="fa fa-download"></i></a><a href="#"
+							class="expand-collapse-btn" "="" data-toggle="tooltip"
+							data-placement="top" title=""
+							data-original-title="Expand and Collapse"><i
+							class="fa fa-arrows-alt"></i><i class="fa fa-compress"></i></a> <a
+							href="javascript:void(0);" class="keyboard-btn"
+							"="" data-toggle="tooltip" data-placement="top" title=""
+							data-original-title="Keyboard shortcuts"><i
+							class="fa fa-keyboard-o"></i></a> <a href="javascript:void(0);"
+							class="settings-btn" "="" data-toggle="tooltip"
+							data-placement="top" title="" data-original-title="Settings"><i
+							class="fa fa-cog"></i></a>
+						<div id="settings-dropdown" class="popover bottom"
+							style="display: none;">
+							<div class="arrow"></div>
+							<h3 class="popover-title">Editor Mode</h3>
+							<div class="popover-content">
+								<div class="btn-group clearfix" role="group" aria-label="...">
+									<button type="button" class="btn btn-default"
+										data-value="emacs">Emacs</button>
+									<button type="button" class="btn btn-default" data-value="ace">Normal</button>
+									<button type="button" class="btn btn-default" data-value="vim">Vim</button>
+								</div>
+							</div>
+							<h3 class="popover-title">Editor Theme</h3>
+							<div class="popover-content form1">
+								<span class="select"> <select id="change_editor_themes"
+									size="1">
+										<optgroup label="Bright">
+											<option value="ace/theme/chrome">Chrome</option>
+											<option value="ace/theme/clouds">Clouds</option>
+											<option value="ace/theme/crimson_editor">Crimson
+												Editor</option>
+											<option value="ace/theme/dawn">Dawn</option>
+											<option value="ace/theme/dreamweaver">Dreamweaver</option>
+											<option value="ace/theme/eclipse">Eclipse</option>
+											<option value="ace/theme/github">GitHub</option>
+											<option value="ace/theme/iplastic">IPlastic</option>
+											<option value="ace/theme/solarized_light">Solarized
+												Light</option>
+											<option value="ace/theme/textmate">TextMate</option>
+											<option value="ace/theme/tomorrow">Tomorrow</option>
+											<option value="ace/theme/xcode" selected="selected">XCode</option>
+											<option value="ace/theme/kuroir">Kuroir</option>
+											<option value="ace/theme/katzenmilch">KatzenMilch</option>
+											<option value="ace/theme/sqlserver">SQL Server</option>
+										</optgroup>
+										<optgroup label="Dark">
+											<option value="ace/theme/ambiance">Ambiance</option>
+											<option value="ace/theme/chaos">Chaos</option>
+											<option value="ace/theme/clouds_midnight">Clouds
+												Midnight</option>
+											<option value="ace/theme/cobalt">Cobalt</option>
+											<option value="ace/theme/idle_fingers">idle Fingers</option>
+											<option value="ace/theme/kr_theme">krTheme</option>
+											<option value="ace/theme/merbivore">Merbivore</option>
+											<option value="ace/theme/merbivore_soft">Merbivore
+												Soft</option>
+											<option value="ace/theme/mono_industrial">Mono
+												Industrial</option>
+											<option value="ace/theme/monokai">Monokai</option>
+											<option value="ace/theme/pastel_on_dark">Pastel on
+												dark</option>
+											<option value="ace/theme/solarized_dark">Solarized
+												Dark</option>
+											<option value="ace/theme/terminal">Terminal</option>
+											<option value="ace/theme/tomorrow_night">Tomorrow
+												Night</option>
+											<option value="ace/theme/tomorrow_night_blue">Tomorrow
+												Night Blue</option>
+											<option value="ace/theme/tomorrow_night_bright">Tomorrow
+												Night Bright</option>
+											<option value="ace/theme/tomorrow_night_eighties">Tomorrow
+												Night 80s</option>
+											<option value="ace/theme/twilight">Twilight</option>
+											<option value="ace/theme/vibrant_ink">Vibrant Ink</option>
+										</optgroup>
+								</select>
+								</span>
+							</div>
+							<div class="row">
+								<div class="col-sm-6 col-xs-12">
+									<h3 class="popover-title">Tab Spaces</h3>
+									<div class="popover-content form1">
+										<input type="text" class="form-control" id="tab_space"
+											maxlength="2" placeholder="0">
+									</div>
+								</div>
+								<div class="col-sm-6 col-xs-12">
+									<h3 class="popover-title">Font Size</h3>
+									<div class="popover-content form1">
+										<span class="select"> <select id="fontsize" size="1">
+												<option value="10px">10px</option>
+												<option value="11px">11px</option>
+												<option value="12px">12px</option>
+												<option value="13px">13px</option>
+												<option value="14px">14px</option>
+												<option value="16px" selected="selected">16px</option>
+												<option value="18px">18px</option>
+												<option value="20px">20px</option>
+												<option value="24px">24px</option>
+										</select>
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="popover-content form1">
+								<span class="checkbox-input auto-complete-snippet"> <input
+									type="checkbox" checked="checked" value="1"
+									name="auto_complete_snippet" id="auto-complete"> <label
+									for="auto-complete">Auto Complete </label>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="upload-code">
+						<p>
+							<a href="javascript:void(0);" data-toggle="modal"
+								data-target="#upload-user-code-attention"><i
+								class="fa fa-upload"></i> Upload Code </a> as a file.
+						</p>
+					</div>
+					<!-- <div class="save-code-buttons">
+                 <p>
+                 <span id="current_buffer_div"><strong>Current Buffer</strong> <small>(saved locally, editable)</small></span>
+                     <a href="javascript:void(0)" id="create-new-buffer"><i class="fa fa-code-fork" aria-hidden="true"></i></a>
+                     <a href="javascript:void(0)" onclick="Tg_ChallengeDetailPage.loadBufferCode('MTA2NzNAIyRAIyQ5OTg5MDVAIyRAIyQ0NTMyODk3QCMkQCMkMTQ5MzgwNjkyN0AjJEAjJDc4MzQ0');"><i class="fa fa-repeat" aria-hidden="true"></i></a>
+                     <a href="javascript:void(0)" id="delete-buffer" style="display:none;"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                 </p>
+                 </div> -->
+				</header>
+				<!-- <div class="timeline-version" id="show_buffer_div" style="display:none;">
+            <ul class="clearfix">
+                <li class="current"><a href="javascript:void(0)" ><span> &nbsp </span></a></li>
+            </ul>
+            </div> -->
+				<pre id="split-editor" class="editing-box ace_editor ace-tm"
+					style="font-size: 16px; height: 190px;">
+					<textarea class="ace_text-input" wrap="off" autocorrect="off"
+						autocapitalize="off" spellcheck="false"
+						style="opacity: 0; height: 19px; width: 8.79688px; left: 55px; top: 171px;"></textarea>
+					<div class="ace_gutter">
+						<div class="ace_layer ace_gutter-layer ace_folding-enabled"
+							style="margin-top: 0px; height: 228px; width: 51px;">
+							<div class="ace_gutter-cell " style="height: 19px;">1</div>
+							<div class="ace_gutter-cell " style="height: 19px;">2</div>
+							<div class="ace_gutter-cell " style="height: 19px;">3</div>
+							<div class="ace_gutter-cell " style="height: 19px;">4</div>
+							<div class="ace_gutter-cell " style="height: 19px;">5</div>
+							<div class="ace_gutter-cell " style="height: 19px;">6<span
+									class="ace_fold-widget ace_start ace_open"
+									style="height: 19px;"></span>
+							</div>
+							<div class="ace_gutter-cell " style="height: 19px;">7<span
+									class="ace_fold-widget ace_start ace_open"
+									style="height: 19px;"></span>
+							</div>
+							<div class="ace_gutter-cell " style="height: 19px;">8</div>
+							<div class="ace_gutter-cell " style="height: 19px;">9</div>
+							<div class="ace_gutter-cell " style="height: 19px;">10</div>
+						</div>
+						<div class="ace_gutter-active-line"
+							style="top: 0px; height: 14px; display: none;"></div>
+					</div>
+					<div class="ace_scroller"
+						style="left: 51px; right: 0px; bottom: 0px;">
+						<div class="ace_content"
+							style="margin-top: 0px; width: 1132px; height: 228px; margin-left: 0px;">
+							<div class="ace_layer ace_print-margin-layer">
+								<div class="ace_print-margin"
+									style="left: 707.75px; visibility: visible;"></div>
+							</div>
+							<div class="ace_layer ace_marker-layer"></div>
+							<div class="ace_layer ace_text-layer" style="padding: 0px 4px;">
+								<div class="ace_line" style="height: 19px">
+									<span class="ace_keyword">import</span> <span
+										class="ace_identifier">java</span><span
+										class="ace_punctuation ace_operator">.</span><span
+										class="ace_identifier">io</span><span
+										class="ace_punctuation ace_operator">.</span><span
+										class="ace_keyword ace_operator">*</span><span
+										class="ace_punctuation ace_operator">;</span>
+								</div>
+								<div class="ace_line" style="height: 19px">
+									<span class="ace_keyword">import</span> <span
+										class="ace_identifier">java</span><span
+										class="ace_punctuation ace_operator">.</span><span
+										class="ace_identifier">util</span><span
+										class="ace_punctuation ace_operator">.</span><span
+										class="ace_keyword ace_operator">*</span><span
+										class="ace_punctuation ace_operator">;</span>
+								</div>
+								<div class="ace_line" style="height: 19px">
+									<span class="ace_keyword">import</span> <span
+										class="ace_identifier">java</span><span
+										class="ace_punctuation ace_operator">.</span><span
+										class="ace_identifier">text</span><span
+										class="ace_punctuation ace_operator">.</span><span
+										class="ace_keyword ace_operator">*</span><span
+										class="ace_punctuation ace_operator">;</span>
+								</div>
+								<div class="ace_line" style="height: 19px">
+									<span class="ace_keyword">import</span> <span
+										class="ace_identifier">java</span><span
+										class="ace_punctuation ace_operator">.</span><span
+										class="ace_identifier">math</span><span
+										class="ace_punctuation ace_operator">.</span><span
+										class="ace_keyword ace_operator">*</span><span
+										class="ace_punctuation ace_operator">;</span>
+								</div>
+								<div class="ace_line" style="height: 19px">
+									<span class="ace_keyword">import</span> <span
+										class="ace_identifier">java</span><span
+										class="ace_punctuation ace_operator">.</span><span
+										class="ace_identifier">util</span><span
+										class="ace_punctuation ace_operator">.</span><span
+										class="ace_identifier">regex</span><span
+										class="ace_punctuation ace_operator">.</span><span
+										class="ace_keyword ace_operator">*</span><span
+										class="ace_punctuation ace_operator">;</span>
+								</div>
+								<div class="ace_line" style="height: 19px">
+									<span class="ace_keyword">public</span> <span
+										class="ace_keyword">class</span> <span class="ace_identifier">CandidateCode</span> <span
+										class="ace_paren ace_lparen">{</span>
+								</div>
+								<div class="ace_line" style="height: 19px">    <span
+										class="ace_comment">/*</span>
+								</div>
+								<div class="ace_line" style="height: 19px">
+									<span class="ace_indent-guide">    </span><span
+										class="ace_comment"> * Complete the function below.</span>
+								</div>
+								<div class="ace_line" style="height: 19px">
+									<span class="ace_comment">    */</span>
+								</div>
+								<div class="ace_line" style="height: 19px"></div>
+							</div>
+							<div class="ace_layer ace_marker-layer"></div>
+							<div class="ace_layer ace_cursor-layer ace_hidden-cursors"
+								style="display: none;">
+								<div class="ace_cursor"
+									style="left: 4px; top: 171px; width: 8.79688px; height: 19px;"></div>
+							</div>
+						</div>
+					</div>
+					<div class="ace_scrollbar ace_scrollbar-v"
+						style="display: none; width: 22px; bottom: 0px;">
+						<div class="ace_scrollbar-inner"
+							style="width: 22px; height: 190px;"></div>
+					</div>
+					<div class="ace_scrollbar ace_scrollbar-h"
+						style="display: none; height: 22px; left: 51px; right: 0px;">
+						<div class="ace_scrollbar-inner"
+							style="height: 22px; width: 1183px;"></div>
+					</div>
+					<div
+						style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: hidden;">
+						<div
+							style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;"></div>
+						<div
+							style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div>
+					</div>
+				</pre>
+				<!--Main editor id -->
+				<pre id="editor" class="editing-box ace_editor ace-xcode"
+					style="font-size: 16px; height: 380px;">
+					<textarea class="ace_text-input" wrap="off" autocorrect="off"
+						autocapitalize="off" spellcheck="false"
+						style="opacity: 0; height: 19px; width: 8.79688px; left: 55px; top: 76px;"></textarea>
+					<div class="ace_gutter">
+						<div class="ace_layer ace_gutter-layer ace_folding-enabled"
+							style="margin-top: 0px; height: 418px; width: 51px;">
+							<div class="ace_gutter-cell " style="height: 19px;">11</div>
+							<div class="ace_gutter-cell " style="height: 19px;">12</div>
+							<div class="ace_gutter-cell " style="height: 19px;">13</div>
+							<div class="ace_gutter-cell " style="height: 19px;">14</div>
+							<div class="ace_gutter-cell " style="height: 19px;">15</div>
+						</div>
+						<div class="ace_gutter-active-line"
+							style="top: 76px; height: 19px;"></div>
+					</div>
+					<div class="ace_scroller"
+						style="left: 51px; right: 0px; bottom: 0px;">
+						<div class="ace_content"
+							style="margin-top: 0px; width: 1132px; height: 418px; margin-left: 0px;">
+							<div class="ace_layer ace_print-margin-layer">
+								<div class="ace_print-margin"
+									style="left: 707.75px; visibility: hidden;"></div>
+							</div>
+							<div class="ace_layer ace_marker-layer">
+								<div class="ace_active-line"
+									style="height: 19px; top: 76px; left: 0; right: 0;"></div>
+							</div>
+							<div class="ace_layer ace_text-layer" style="padding: 0px 4px;">
+								<div class="ace_line_group" style="height: 19px">
+									<div class="ace_line" style="height: 19px">    public static int prisonEscape(int input1,int input2,int[] input3,String[] input4)</div>
+								</div>
+								<div class="ace_line_group" style="height: 19px">
+									<div class="ace_line" style="height: 19px">    {</div>
+								</div>
+								<div class="ace_line_group" style="height: 19px">
+									<div class="ace_line" style="height: 19px">    //Write code here</div>
+								</div>
+								<div class="ace_line_group" style="height: 19px">
+									<div class="ace_line" style="height: 19px">    }</div>
+								</div>
+								<div class="ace_line_group" style="height: 19px">
+									<div class="ace_line" style="height: 19px"></div>
+								</div>
+							</div>
+							<div class="ace_layer ace_marker-layer"></div>
+							<div class="ace_layer ace_cursor-layer ace_hidden-cursors">
+								<div class="ace_cursor"
+									style="left: 4px; top: 76px; width: 8.79688px; height: 19px;"></div>
+							</div>
+						</div>
+					</div>
+					<div class="ace_scrollbar ace_scrollbar-v"
+						style="display: none; width: 22px; bottom: 0px;">
+						<div class="ace_scrollbar-inner"
+							style="width: 22px; height: 95px;"></div>
+					</div>
+					<div class="ace_scrollbar ace_scrollbar-h"
+						style="display: none; height: 22px; left: 51px; right: 0px;">
+						<div class="ace_scrollbar-inner"
+							style="height: 22px; width: 1183px;"></div>
+					</div>
+					<div
+						style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: hidden;">
+						<div
+							style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;"></div>
+						<div
+							style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div>
+					</div>
+				</pre>
+				<pre id="split-tail-editor"
+					class="tail-split-editor editing-box ace_editor ace-tm"
+					style="font-size: 16px; height: 589px;">
+					<textarea class="ace_text-input" wrap="off" autocorrect="off"
+						autocapitalize="off" spellcheck="false"
+						style="opacity: 0; height: 19px; width: 8.79688px; left: 55px; top: 570px;"></textarea>
+					<div class="ace_gutter">
+						<div class="ace_layer ace_gutter-layer ace_folding-enabled"
+							style="margin-top: 0px; height: 627px; width: 51px;">
+							<div class="ace_gutter-cell " style="height: 19px;">16</div>
+							<div class="ace_gutter-cell " style="height: 19px;">17<span
+									class="ace_fold-widget ace_start ace_open"
+									style="height: 19px;"></span>
+							</div>
+							<div class="ace_gutter-cell " style="height: 19px;">18</div>
+							<div class="ace_gutter-cell " style="height: 19px;">19</div>
+							<div class="ace_gutter-cell " style="height: 19px;">20</div>
+							<div class="ace_gutter-cell " style="height: 19px;">21</div>
+							<div class="ace_gutter-cell " style="height: 19px;">22</div>
+							<div class="ace_gutter-cell " style="height: 19px;">23</div>
+							<div class="ace_gutter-cell " style="height: 19px;">24</div>
+							<div class="ace_gutter-cell " style="height: 19px;">25</div>
+							<div class="ace_gutter-cell " style="height: 19px;">26<span
+									class="ace_fold-widget ace_start ace_open"
+									style="height: 19px;"></span>
+							</div>
+							<div class="ace_gutter-cell " style="height: 19px;">27</div>
+							<div class="ace_gutter-cell " style="height: 19px;">28</div>
+							<div class="ace_gutter-cell " style="height: 19px;">29</div>
+							<div class="ace_gutter-cell " style="height: 19px;">30</div>
+							<div class="ace_gutter-cell " style="height: 19px;">31</div>
+							<div class="ace_gutter-cell " style="height: 19px;">32</div>
+							<div class="ace_gutter-cell " style="height: 19px;">33</div>
+							<div class="ace_gutter-cell " style="height: 19px;">34<span
+									class="ace_fold-widget ace_start ace_open"
+									style="height: 19px;"></span>
+							</div>
+							<div class="ace_gutter-cell " style="height: 19px;">35<span
+									class="ace_fold-widget ace_start ace_open"
+									style="height: 19px;"></span>
+							</div>
+							<div class="ace_gutter-cell " style="height: 19px;">36</div>
+							<div class="ace_gutter-cell " style="height: 19px;">37<span
+									class="ace_fold-widget ace_start ace_open"
+									style="height: 19px;"></span>
+							</div>
+							<div class="ace_gutter-cell " style="height: 19px;">38</div>
+							<div class="ace_gutter-cell " style="height: 19px;">39</div>
+							<div class="ace_gutter-cell " style="height: 19px;">40</div>
+							<div class="ace_gutter-cell " style="height: 19px;">41</div>
+							<div class="ace_gutter-cell " style="height: 19px;">42</div>
+							<div class="ace_gutter-cell " style="height: 19px;">43</div>
+							<div class="ace_gutter-cell " style="height: 19px;">44</div>
+							<div class="ace_gutter-cell " style="height: 19px;">45</div>
+							<div class="ace_gutter-cell " style="height: 19px;">46</div>
+						</div>
+						<div class="ace_gutter-active-line"
+							style="top: 0px; height: 14px; display: none;"></div>
+					</div>
+					<div class="ace_scroller"
+						style="left: 51px; right: 0px; bottom: 0px;">
+						<div class="ace_content"
+							style="margin-top: 0px; width: 1132px; height: 627px; margin-left: 0px;">
+							<div class="ace_layer ace_print-margin-layer">
+								<div class="ace_print-margin"
+									style="left: 707.75px; visibility: visible;"></div>
+							</div>
+							<div class="ace_layer ace_marker-layer"></div>
+							<div class="ace_layer ace_text-layer" style="padding: 0px 4px;">
+								<div class="ace_line" style="height: 19px"></div>
+								<div class="ace_line" style="height: 19px">    <span
+										class="ace_keyword">public</span> <span class="ace_keyword">static</span> <span
+										class="ace_keyword">void</span> <span class="ace_identifier">main</span><span
+										class="ace_paren ace_lparen">(</span><span
+										class="ace_variable ace_language">String</span><span
+										class="ace_paren ace_lparen">[</span><span
+										class="ace_paren ace_rparen">]</span> <span
+										class="ace_identifier">args</span><span
+										class="ace_paren ace_rparen">)</span> <span
+										class="ace_identifier">throws</span> <span
+										class="ace_identifier">IOException</span><span
+										class="ace_paren ace_lparen">{</span>
+								</div>
+								<div class="ace_line" style="height: 19px">
+									<span class="ace_indent-guide">    </span>    <span
+										class="ace_identifier">Scanner</span> <span
+										class="ace_keyword">in</span> <span
+										class="ace_keyword ace_operator">=</span> <span
+										class="ace_keyword">new</span> <span class="ace_identifier">Scanner</span><span
+										class="ace_paren ace_lparen">(</span><span
+										class="ace_identifier">System</span><span
+										class="ace_punctuation ace_operator">.</span><span
+										class="ace_keyword">in</span><span
+										class="ace_paren ace_rparen">)</span><span
+										class="ace_punctuation ace_operator">;</span>
+								</div>
+								<div class="ace_line" style="height: 19px">
+									<span class="ace_indent-guide">    </span>    <span
+										class="ace_identifier">int</span> <span class="ace_identifier">output</span> <span
+										class="ace_keyword ace_operator">=</span> <span
+										class="ace_constant ace_numeric">0</span><span
+										class="ace_punctuation ace_operator">;</span>
+								</div>
+								<div class="ace_line" style="height: 19px">
+									<span class="ace_indent-guide">    </span>    <span
+										class="ace_identifier">int</span> <span class="ace_identifier">ip1</span> <span
+										class="ace_keyword ace_operator">=</span> <span
+										class="ace_identifier">Integer</span><span
+										class="ace_punctuation ace_operator">.</span><span
+										class="ace_support ace_function">parseInt</span><span
+										class="ace_paren ace_lparen">(</span><span class="ace_keyword">in</span><span
+										class="ace_punctuation ace_operator">.</span><span
+										class="ace_identifier">nextLine</span><span
+										class="ace_paren ace_lparen">(</span><span
+										class="ace_paren ace_rparen">)</span><span
+										class="ace_punctuation ace_operator">.</span><span
+										class="ace_identifier">trim</span><span
+										class="ace_paren ace_lparen">(</span><span
+										class="ace_paren ace_rparen">))</span><span
+										class="ace_punctuation ace_operator">;</span>
+								</div>
+								<div class="ace_line" style="height: 19px">
+									<span class="ace_indent-guide">    </span>    <span
+										class="ace_identifier">int</span> <span class="ace_identifier">ip2</span> <span
+										class="ace_keyword ace_operator">=</span> <span
+										class="ace_identifier">Integer</span><span
+										class="ace_punctuation ace_operator">.</span><span
+										class="ace_support ace_function">parseInt</span><span
+										class="ace_paren ace_lparen">(</span><span class="ace_keyword">in</span><span
+										class="ace_punctuation ace_operator">.</span><span
+										class="ace_identifier">nextLine</span><span
+										class="ace_paren ace_lparen">(</span><span
+										class="ace_paren ace_rparen">)</span><span
+										class="ace_punctuation ace_operator">.</span><span
+										class="ace_identifier">trim</span><span
+										class="ace_paren ace_lparen">(</span><span
+										class="ace_paren ace_rparen">))</span><span
+										class="ace_punctuation ace_operator">;</span>
+								</div>
+								<div class="ace_line" style="height: 19px">
+									<span class="ace_indent-guide">    </span>    <span
+										class="ace_identifier">int</span> <span class="ace_identifier">ip3_size</span> <span
+										class="ace_keyword ace_operator">=</span> <span
+										class="ace_constant ace_numeric">0</span><span
+										class="ace_punctuation ace_operator">;</span>
+								</div>
+								<div class="ace_line" style="height: 19px">
+									<span class="ace_indent-guide">    </span>    <span
+										class="ace_identifier">ip3_size</span> <span
+										class="ace_keyword ace_operator">=</span> <span
+										class="ace_identifier">Integer</span><span
+										class="ace_punctuation ace_operator">.</span><span
+										class="ace_support ace_function">parseInt</span><span
+										class="ace_paren ace_lparen">(</span><span class="ace_keyword">in</span><span
+										class="ace_punctuation ace_operator">.</span><span
+										class="ace_identifier">nextLine</span><span
+										class="ace_paren ace_lparen">(</span><span
+										class="ace_paren ace_rparen">)</span><span
+										class="ace_punctuation ace_operator">.</span><span
+										class="ace_identifier">trim</span><span
+										class="ace_paren ace_lparen">(</span><span
+										class="ace_paren ace_rparen">))</span><span
+										class="ace_punctuation ace_operator">;</span>
+								</div>
+								<div class="ace_line" style="height: 19px">
+									<span class="ace_indent-guide">    </span>    <span
+										class="ace_identifier">int</span><span
+										class="ace_paren ace_lparen">[</span><span
+										class="ace_paren ace_rparen">]</span> <span
+										class="ace_identifier">ip3</span> <span
+										class="ace_keyword ace_operator">=</span> <span
+										class="ace_keyword">new</span> <span class="ace_identifier">int</span><span
+										class="ace_paren ace_lparen">[</span><span
+										class="ace_identifier">ip3_size</span><span
+										class="ace_paren ace_rparen">]</span><span
+										class="ace_punctuation ace_operator">;</span>
+								</div>
+								<div class="ace_line" style="height: 19px">
+									<span class="ace_indent-guide">    </span>    <span
+										class="ace_identifier">int</span> <span class="ace_identifier">ip3_item</span><span
+										class="ace_punctuation ace_operator">;</span>
+								</div>
+								<div class="ace_line" style="height: 19px">
+									<span class="ace_indent-guide">    </span>    <span
+										class="ace_keyword">for</span><span
+										class="ace_paren ace_lparen">(</span><span
+										class="ace_identifier">int</span> <span class="ace_identifier">ip3_i</span> <span
+										class="ace_keyword ace_operator">=</span> <span
+										class="ace_constant ace_numeric">0</span><span
+										class="ace_punctuation ace_operator">;</span> <span
+										class="ace_identifier">ip3_i</span> <span
+										class="ace_keyword ace_operator">&lt;</span> <span
+										class="ace_identifier">ip3_size</span><span
+										class="ace_punctuation ace_operator">;</span> <span
+										class="ace_identifier">ip3_i</span><span
+										class="ace_keyword ace_operator">++</span><span
+										class="ace_paren ace_rparen">)</span> <span
+										class="ace_paren ace_lparen">{</span>
+								</div>
+								<div class="ace_line" style="height: 19px">
+									<span class="ace_indent-guide">    </span><span
+										class="ace_indent-guide">    </span>    <span
+										class="ace_identifier">ip3_item</span> <span
+										class="ace_keyword ace_operator">=</span> <span
+										class="ace_identifier">Integer</span><span
+										class="ace_punctuation ace_operator">.</span><span
+										class="ace_support ace_function">parseInt</span><span
+										class="ace_paren ace_lparen">(</span><span class="ace_keyword">in</span><span
+										class="ace_punctuation ace_operator">.</span><span
+										class="ace_identifier">nextLine</span><span
+										class="ace_paren ace_lparen">(</span><span
+										class="ace_paren ace_rparen">)</span><span
+										class="ace_punctuation ace_operator">.</span><span
+										class="ace_identifier">trim</span><span
+										class="ace_paren ace_lparen">(</span><span
+										class="ace_paren ace_rparen">))</span><span
+										class="ace_punctuation ace_operator">;</span>
+								</div>
+								<div class="ace_line" style="height: 19px">
+									<span class="ace_indent-guide">    </span><span
+										class="ace_indent-guide">    </span>    <span
+										class="ace_identifier">ip3</span><span
+										class="ace_paren ace_lparen">[</span><span
+										class="ace_identifier">ip3_i</span><span
+										class="ace_paren ace_rparen">]</span> <span
+										class="ace_keyword ace_operator">=</span> <span
+										class="ace_identifier">ip3_item</span><span
+										class="ace_punctuation ace_operator">;</span>
+								</div>
+								<div class="ace_line" style="height: 19px">
+									<span class="ace_indent-guide">    </span>    <span
+										class="ace_paren ace_rparen">}</span>
+								</div>
+								<div class="ace_line" style="height: 19px">
+									<span class="ace_indent-guide">    </span>    <span
+										class="ace_identifier">int</span> <span class="ace_identifier">ip4_size</span> <span
+										class="ace_keyword ace_operator">=</span> <span
+										class="ace_constant ace_numeric">0</span><span
+										class="ace_punctuation ace_operator">;</span>
+								</div>
+								<div class="ace_line" style="height: 19px">
+									<span class="ace_indent-guide">    </span>    <span
+										class="ace_identifier">ip4_size</span> <span
+										class="ace_keyword ace_operator">=</span> <span
+										class="ace_identifier">Integer</span><span
+										class="ace_punctuation ace_operator">.</span><span
+										class="ace_support ace_function">parseInt</span><span
+										class="ace_paren ace_lparen">(</span><span class="ace_keyword">in</span><span
+										class="ace_punctuation ace_operator">.</span><span
+										class="ace_identifier">nextLine</span><span
+										class="ace_paren ace_lparen">(</span><span
+										class="ace_paren ace_rparen">)</span><span
+										class="ace_punctuation ace_operator">.</span><span
+										class="ace_identifier">trim</span><span
+										class="ace_paren ace_lparen">(</span><span
+										class="ace_paren ace_rparen">))</span><span
+										class="ace_punctuation ace_operator">;</span>
+								</div>
+								<div class="ace_line" style="height: 19px">
+									<span class="ace_indent-guide">    </span>    <span
+										class="ace_variable ace_language">String</span><span
+										class="ace_paren ace_lparen">[</span><span
+										class="ace_paren ace_rparen">]</span> <span
+										class="ace_identifier">ip4</span> <span
+										class="ace_keyword ace_operator">=</span> <span
+										class="ace_keyword">new</span> <span
+										class="ace_variable ace_language">String</span><span
+										class="ace_paren ace_lparen">[</span><span
+										class="ace_identifier">ip4_size</span><span
+										class="ace_paren ace_rparen">]</span><span
+										class="ace_punctuation ace_operator">;</span>
+								</div>
+								<div class="ace_line" style="height: 19px">
+									<span class="ace_indent-guide">    </span>    <span
+										class="ace_variable ace_language">String</span> <span
+										class="ace_identifier">ip4_item</span><span
+										class="ace_punctuation ace_operator">;</span>
+								</div>
+								<div class="ace_line" style="height: 19px">
+									<span class="ace_indent-guide">    </span>    <span
+										class="ace_keyword">for</span><span
+										class="ace_paren ace_lparen">(</span><span
+										class="ace_identifier">int</span> <span class="ace_identifier">ip4_i</span> <span
+										class="ace_keyword ace_operator">=</span> <span
+										class="ace_constant ace_numeric">0</span><span
+										class="ace_punctuation ace_operator">;</span> <span
+										class="ace_identifier">ip4_i</span> <span
+										class="ace_keyword ace_operator">&lt;</span> <span
+										class="ace_identifier">ip4_size</span><span
+										class="ace_punctuation ace_operator">;</span> <span
+										class="ace_identifier">ip4_i</span><span
+										class="ace_keyword ace_operator">++</span><span
+										class="ace_paren ace_rparen">)</span> <span
+										class="ace_paren ace_lparen">{</span>
+								</div>
+								<div class="ace_line" style="height: 19px">
+									<span class="ace_indent-guide">    </span><span
+										class="ace_indent-guide">    </span>    <span
+										class="ace_keyword">try</span> <span
+										class="ace_paren ace_lparen">{</span>
+								</div>
+								<div class="ace_line" style="height: 19px">
+									<span class="ace_indent-guide">    </span>    <span
+										class="ace_identifier">ip4_item</span> <span
+										class="ace_keyword ace_operator">=</span> <span
+										class="ace_keyword">in</span><span
+										class="ace_punctuation ace_operator">.</span><span
+										class="ace_identifier">nextLine</span><span
+										class="ace_paren ace_lparen">(</span><span
+										class="ace_paren ace_rparen">)</span><span
+										class="ace_punctuation ace_operator">;</span>
+								</div>
+								<div class="ace_line" style="height: 19px">
+									<span class="ace_indent-guide">    </span><span
+										class="ace_indent-guide">    </span>    <span
+										class="ace_paren ace_rparen">}</span> <span
+										class="ace_keyword">catch</span> <span
+										class="ace_paren ace_lparen">(</span><span
+										class="ace_identifier">Exception</span> <span
+										class="ace_identifier">e</span><span
+										class="ace_paren ace_rparen">)</span> <span
+										class="ace_paren ace_lparen">{</span>
+								</div>
+								<div class="ace_line" style="height: 19px">
+									<span class="ace_indent-guide">    </span>    <span
+										class="ace_identifier">ip4_item</span> <span
+										class="ace_keyword ace_operator">=</span> <span
+										class="ace_constant ace_language">null</span><span
+										class="ace_punctuation ace_operator">;</span>
+								</div>
+								<div class="ace_line" style="height: 19px">
+									<span class="ace_indent-guide">    </span><span
+										class="ace_indent-guide">    </span>    <span
+										class="ace_paren ace_rparen">}</span>
+								</div>
+								<div class="ace_line" style="height: 19px">
+									<span class="ace_indent-guide">    </span><span
+										class="ace_indent-guide">    </span>    <span
+										class="ace_identifier">ip4</span><span
+										class="ace_paren ace_lparen">[</span><span
+										class="ace_identifier">ip4_i</span><span
+										class="ace_paren ace_rparen">]</span> <span
+										class="ace_keyword ace_operator">=</span> <span
+										class="ace_identifier">ip4_item</span><span
+										class="ace_punctuation ace_operator">;</span>
+								</div>
+								<div class="ace_line" style="height: 19px">
+									<span class="ace_indent-guide">    </span>    <span
+										class="ace_paren ace_rparen">}</span>
+								</div>
+								<div class="ace_line" style="height: 19px">
+									<span class="ace_indent-guide">    </span>    <span
+										class="ace_identifier">output</span> <span
+										class="ace_keyword ace_operator">=</span> <span
+										class="ace_identifier">prisonEscape</span><span
+										class="ace_paren ace_lparen">(</span><span
+										class="ace_identifier">ip1</span><span
+										class="ace_punctuation ace_operator">,</span><span
+										class="ace_identifier">ip2</span><span
+										class="ace_punctuation ace_operator">,</span><span
+										class="ace_identifier">ip3</span><span
+										class="ace_punctuation ace_operator">,</span><span
+										class="ace_identifier">ip4</span><span
+										class="ace_paren ace_rparen">)</span><span
+										class="ace_punctuation ace_operator">;</span>
+								</div>
+								<div class="ace_line" style="height: 19px">
+									<span class="ace_indent-guide">    </span>    <span
+										class="ace_identifier">System</span><span
+										class="ace_punctuation ace_operator">.</span><span
+										class="ace_identifier">out</span><span
+										class="ace_punctuation ace_operator">.</span><span
+										class="ace_identifier">println</span><span
+										class="ace_paren ace_lparen">(</span><span
+										class="ace_variable ace_language">String</span><span
+										class="ace_punctuation ace_operator">.</span><span
+										class="ace_support ace_function">valueOf</span><span
+										class="ace_paren ace_lparen">(</span><span
+										class="ace_identifier">output</span><span
+										class="ace_paren ace_rparen">))</span><span
+										class="ace_punctuation ace_operator">;</span>
+								</div>
+								<div class="ace_line" style="height: 19px">    <span
+										class="ace_paren ace_rparen">}</span>
+								</div>
+								<div class="ace_line" style="height: 19px">
+									<span class="ace_paren ace_rparen">}</span>
+								</div>
+								<div class="ace_line" style="height: 19px"></div>
+							</div>
+							<div class="ace_layer ace_marker-layer"></div>
+							<div class="ace_layer ace_cursor-layer ace_hidden-cursors"
+								style="display: none;">
+								<div class="ace_cursor"
+									style="left: 4px; top: 570px; width: 8.79688px; height: 19px;"></div>
+							</div>
+						</div>
+					</div>
+					<div class="ace_scrollbar ace_scrollbar-v"
+						style="display: none; width: 22px; bottom: 0px;">
+						<div class="ace_scrollbar-inner"
+							style="width: 22px; height: 589px;"></div>
+					</div>
+					<div class="ace_scrollbar ace_scrollbar-h"
+						style="display: none; height: 22px; left: 51px; right: 0px;">
+						<div class="ace_scrollbar-inner"
+							style="height: 22px; width: 1183px;"></div>
+					</div>
+					<div
+						style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: hidden;">
+						<div
+							style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;"></div>
+						<div
+							style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div>
+					</div>
+				</pre>
+				<footer class="editor-footer">
+					<p class="clearfix">
+						<code class="pull-left editor-mode">Normal</code>
+						<code class="pull-right">
+							Line: <span id="RowNum">15</span> Col: <span id="ColsNum">0</span>
+						</code>
+					</p>
+				</footer>
+				<!--
+            <div class="upload-code"> <p><a  href="javascript:void(0);" data-toggle="modal" data-target="#upload-user-code-attention" ><i class="fa fa-upload"></i> Upload Code </a> as a file.</p></div>
+            -->
+				<div id="editor-actions" style="margin-top: 5px;">
+					<input type="button" id="show_owntestcase"
+						class="btnCodeGrayChall btn button4" "="" value="Own Testcase"
+						name="own_testcase"> <span id="compile_code"> <input
+						type="button" class="btnCodeGrayChall btn button4"
+						value="Compile &amp; Run"
+						onclick="compile_test('compile', '78344', 'MTA2NzNAIyRAIyQ5OTg5MDVAIyRAIyQ0NTMyODk3QCMkQCMkMTQ5MzgwNjkyN0AjJEAjJDc4MzQ0', 'tg_testcase', 'codehire', 'Y')"
+						name="Compile">
+					</span> <span id="submit_code" class="pull-right"> <input
+						type="button" class="btnCodeGrayChall btn button1"
+						value="Submit Code"
+						onclick="compile_test('submit', '78344', 'MTA2NzNAIyRAIyQ5OTg5MDVAIyRAIyQ0NTMyODk3QCMkQCMkMTQ5MzgwNjkyN0AjJEAjJDc4MzQ0', 'tg_testcase', 'codehire', 'Y')"
+						name="Submit">
+					</span> <a class="btn pull-right" href="javascript:void(0);"
+						id="need_help_coding"> Need help? </a>
+				</div>
+				<div id="submit_code_text" class="alert alert-info" role="alert"
+					style="display: none; margin-top: 20px;">Submitting Code.....</div>
+				<div id="compile_code_text" class="alert alert-info" role="alert"
+					style="display: none; margin-top: 20px;">
+					Compiling Code.....<br> <img
+						src="data:image/gif;base64,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"
+						alt="loading">
+				</div>
+				<div id="own_testcase"
+					style="display: none; color: #707070; font-family: Arial, Helvetica, sans-serif; font-size: 13px;">
+					<br> <label>Enter your own input here</label>
+					<p>
+						<textarea type="text" id="own_testcase_input" class="form-control"
+							style="width: 450px;"
+							onblur="javascript:if (this.value == ''){this.value='5
+4
+3
+1
+2
+3
+5
+3 2
+2 4
+2 5
+4 5
+1 5';}"
+							onfocus="javascript:if (this.value == '5
+4
+3
+1
+2
+3
+5
+3 2
+2 4
+2 5
+4 5
+1 5')
+                            {this.value='';}">5
+4
+3
+1
+2
+3
+5
+3 2
+2 4
+2 5
+4 5
+1 5</textarea>
+					</p>
+					<span id="user_compile_code"> <input type="button"
+						class="btn button1" value="Compile &amp; Run"
+						onclick="compile_test('compile', '78344', 'MTA2NzNAIyRAIyQ5OTg5MDVAIyRAIyQ0NTMyODk3QCMkQCMkMTQ5MzgwNjkyN0AjJEAjJDc4MzQ0', 'own_testcase', 'codejudge')"
+						name="Compile">
+					</span> <span id="user_compile_code_text" style="display: none">Compiling
+						Code.....</span>
+				</div>
+				<br>
+				<!--  -->
+				<h6 id="testcase_status_heading" style="display: none;">
+					Result &nbsp;&nbsp;&nbsp;&nbsp; <span class="alert alert-danger">
+						<i class="fa fa-check" aria-hidden="true"></i> <i
+						class="fa fa-times" aria-hidden="true"></i> <!--<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>-->
+						<span id="default_testcase_status">Testcase Failed</span>
+					</span>
+				</h6>
+				<div id="testcase_status" style=""></div>
+				<h6 id="code_result_heading" style="display: none;">Compilation
+					Log</h6>
+				<div id="code_result" style="display: none;"></div>
+			</div>
+		</div>
+		<!-- How To Improve -->
+		<div class="modal fade" id="how-to-improve" tabindex="-1"
+			role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"
+							aria-label="Close">
+							<span aria-hidden="true">×</span>
+						</button>
+						<h4 class="modal-title">Help Us Improve</h4>
+					</div>
+					<div class="modal-body form1">
+						<ul>
+							<li>
+								<h6>Which sections of this challenge need improvement?</h6> <span
+								class="checkbox-input checkbox-block"> <input
+									id="improve-option1" type="checkbox" name="improve"
+									value="Problem Statement"> <label for="improve-option1">Problem
+										Statement</label>
+							</span> <span class="checkbox-input checkbox-block"> <input
+									id="improve-option2" type="checkbox" name="improve"
+									value="Samples and Explanation"> <label
+									for="improve-option2">Samples and Explanation</label>
+							</span> <span class="checkbox-input checkbox-block" name="improve"
+								value="Test Cases"> <input id="improve-option3"
+									type="checkbox"> <label for="improve-option3">Test
+										Cases</label>
+							</span> <span class="checkbox-input checkbox-block" name="improve"
+								value="Other (Difficulty, Scoring, Classification, Originality, etc)">
+									<input id="improve-option4" type="checkbox"> <label
+									for="improve-option4">Other (Difficulty, Scoring,
+										Classification, Originality, etc)</label>
+							</span>
+							</li>
+							<li>
+								<h6>Is there anything else you'd like to share with us?</h6> <textarea
+									cols="5" class="form-control feedback-suggestion" rows="5"></textarea>
+							</li>
+							<li><input type="submit" data-attempt_id="4532897"
+								data-user_id="998905" data-question_id="78344"
+								data-season_id="10673"
+								class="btn button1 submit-rating-feedback" value="Save changes">
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /How To Improve -->
+		<!-- Suggest Edits -->
+		<div class="modal fade" id="suggest-edits" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"
+							aria-label="Close">
+							<span aria-hidden="true">×</span>
+						</button>
+						<h4 class="modal-title">Help Us Improve</h4>
+					</div>
+					<div class="modal-body form1">
+						<ul>
+							<li><label>Thanks for helping us refine this problem
+									statement. Please address your suggestions below.</label> <textarea
+									cols="5" class="form-control textarea-helpus" rows="5"></textarea></li>
+							<li><div attempt_id="4532897" user_id="998905"
+									question_id="78344" season_id="10673"
+									class="btn button1 submit-feedback" value="Submit Suggestion">Submit
+									Suggestion</div></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /Suggest Edits -->
+	</div>
+	<input type="hidden" id="defaultCode"
+		value="    int prisonEscape(int input1,int input2,int input3_size, int* input3,int input4_size, char** input4)\n    {\n        //Write code here\n    }\n">
+	<input type="hidden" id="defaultHeadCode"
+		value="#include <math.h>\n#include <stdio.h>\n#include <string.h>\n#include <stdlib.h>\n#include <assert.h>\n#include <limits.h>\n#include <stdbool.h>\n\n    /*\n     * Complete the function below.\n    */\n">
+	<input type="hidden" id="defaultTailCode"
+		value="\nint main() {\n    int output = 0;\n    int ip1;\n    scanf(\&quot;%d\&quot;, &amp;ip1);\n    int ip2;\n    scanf(\&quot;%d\&quot;, &amp;ip2);\n    int ip3_size = 0;\n    int ip3_i;\n    scanf(\&quot;%d\\n\&quot;, &amp;ip3_size);\n    int ip3[ip3_size];\n    for(ip3_i = 0; ip3_i < ip3_size; ip3_i++) {\n        int ip3_item;\n        scanf(\&quot;%d\&quot;, &amp;ip3_item);\n        \n        ip3[ip3_i] = ip3_item;\n    }\n    int ip4_size = 0;\n    int ip4_i;\n    scanf(\&quot;%d\\n\&quot;, &amp;ip4_size);\n    char* ip4[ip4_size];\n    for(ip4_i = 0; ip4_i < ip4_size; ip4_i++) {\n        char* ip4_item;\n        ip4_item = (char *)malloc(512000 * sizeof(char));\n        scanf(\&quot;\\n%[^\\n]\&quot;,ip4_item);\n        \n        ip4[ip4_i] = ip4_item;\n    }\n    output = prisonEscape(ip1,ip2,ip3_size,ip3,ip4_size,ip4);\n    printf(\&quot;%d\\n\&quot;, output);\n    return 0;\n}\n">
+	<input type="hidden" id="defaultlanguage" value="java8"> <input
+		type="hidden" id="evaluation_type" value="2"> <input
+		type="hidden" id="encrypt_token"
+		value="MTA2NzNAIyRAIyQ5OTg5MDVAIyRAIyQ0NTMyODk3QCMkQCMkMTQ5MzgwNjkyN0AjJEAjJDc4MzQ0">
+	<input type="hidden" id="form_post" value="1"> <input
+		type="hidden" id="question_category_name" value="coding"> <input
+		type="hidden" id="category_key_problem" value="coding"> <input
+		type="hidden" id="interview_contest" value="N"> <input
+		type="hidden" id="auto_submit_code" value="N"> <input
+		type="hidden" id="is_compile" value="0"> <input type="hidden"
+		id="is_attempted" value="0">
+	<div aria-hidden="false" aria-labelledby="mySmallModalLabel"
+		role="dialog" tabindex="-1" class="modal fade"
+		id="attempt-problem-first">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button aria-label="Close" data-dismiss="modal" class="close"
+						type="button"></button>
+					<h4 id="mySmallModalLabel" class="modal-title">
+						Submit Error<a href="#mySmallModalLabel" class="anchorjs-link"><span
+							class="anchorjs-icon"></span></a>
+					</h4>
+				</div>
+				<div class="modal-body">
+					<p>Please attempt problem first.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn button5" data-dismiss="modal">OK</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<div aria-hidden="false" aria-labelledby="mySmallModalLabel"
+		role="dialog" tabindex="-1" class="modal fade" id="need-help-section">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button aria-label="Close" data-dismiss="modal" class="close"
+						type="button"></button>
+					<h4 class="modal-title">Need Help</h4>
+				</div>
+				<div class="modal-body"></div>
+				<div class="modal-footer">
+					<button type="button" class="btn button1" id="coding_faq_submit"
+						data-season_id="10673"
+						data-season_title="Amazon Prime Video challenge">Submit</button>
+					<button type="button" class="btn button4" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- Original Code Modal -->
+	<div id="user-original-code-attention" class="modal fade" tabindex="-1"
+		role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button aria-label="Close" data-dismiss="modal" class="close"
+						type="button"></button>
+					<h4 id="mySmallModalLabel" class="modal-title">Default Code</h4>
+					<hr>
+				</div>
+				<div class="modal-body">
+					<p>This is the code stub originally provided with this
+						challenge. You can copy this using Ctrl/Cmd+C and paste it back in
+						the code editor.</p>
+					<textarea readonly="" class="form-control"
+						style="padding: 20px 0px 20px 10px; line-height: 15px; font-family: monospace; overflow-y: auto; height: 200px;"
+						id="initial_code">		 
+                </textarea>
+				</div>
+				<div class="modal-footer">
+					<button class="btn button5" type="button" data-dismiss="modal">Close
+						Window</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<div id="upload-user-code-attention" class="modal fade" tabindex="-1"
+		role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button aria-label="Close" data-dismiss="modal" class="close"
+						type="button"></button>
+					<h4 id="mySmallModalLabel" class="modal-title">Attention :
+						Upload file</h4>
+				</div>
+				<div class="modal-body">
+					<p class="alert alert-warning">Uploading a file will replace
+						the current content in your code editor. Would you like to
+						continue?</p>
+				</div>
+				<div class="modal-footer">
+					<button class="btn button7" type="button" data-dismiss="modal">No
+					</button>
+					<button class="btn button1" type="button" id="uploadUserCode">Yes</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<div id="upload-user-code" class="modal fade" tabindex="-1"
+		role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<form method="post" enctype="multipart/form-data"
+					name="upload-dialogue" id="upload-dialogue">
+					<div class="modal-header">
+						<button aria-label="Close" data-dismiss="modal" class="close"
+							type="button"></button>
+						<h4 id="mySmallModalLabel" class="modal-title">Upload Code</h4>
+					</div>
+					<div class="modal-body form1">
+						<input type="hidden" name="extension" id="extension"
+							value=".cpp,.java,.java,.py,.py,.js">
+						<p></p>
+						<p>
+							<label style="float: left; width: 100px; margin-top: 8px;">
+								Source File </label> <span class="btn-file" style="margin-left: 100px;">
+								<a href="javascript:void(0);" class="btn button4">Browse</a> <input
+								type="file" name="code" id="code_upload">
+							</span>
+						</p>
+						<p class="clearfix">
+							<label style="float: left; width: 100px; margin-top: 8px;">
+								Language </label> <span class="select" style="width: 200px; float: left">
+								<select name="language" id="select-language">
+									<option value="auto" selected="selected">Auto Detect</option>
+									<option value="cpp">C++</option>
+									<option value="java">Java</option>
+									<option value="java8">Java 8</option>
+									<option value="python">Python</option>
+									<option value="python3">Python 3</option>
+									<option value="nodejs">Node Js</option>
+							</select>
+							</span>
+						</p>
+						<button class="btn button1 default-submit-btn" type="button"
+							id="uploadUserCodeFile">Upload</button>
+					</div>
+				</form>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="keyboard-bindings" tabindex="-1"
+		role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close"></button>
+					<h4 class="modal-title" id="myModalLabel">Keyboard shortcuts</h4>
+				</div>
+				<div class="modal-body">
+					<table class="table2">
+						<thead>
+							<tr>
+								<th>Windows/Linux</th>
+								<th>Mac</th>
+								<th>Action</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Ctrl+Space</td>
+								<td>Command-Space</td>
+								<td>Show auto complete options</td>
+							</tr>
+							<tr>
+								<td>Ctrl-D</td>
+								<td>Command-D</td>
+								<td>Remove line</td>
+							</tr>
+							<tr>
+								<td>Alt-Shift-Down</td>
+								<td>Command-Option-Down</td>
+								<td>Copy lines down</td>
+							</tr>
+							<tr>
+								<td>Alt-Shift-Up</td>
+								<td>Command-Option-Up</td>
+								<td>Copy lines up</td>
+							</tr>
+							<tr>
+								<td>Alt-Down</td>
+								<td>Option-Down</td>
+								<td>Move lines down</td>
+							</tr>
+							<tr>
+								<td>Alt-Up</td>
+								<td>Option-Up</td>
+								<td>Move lines up</td>
+							</tr>
+							<tr>
+								<td>Alt-Delete</td>
+								<td>Ctrl-K</td>
+								<td>Remove to line end</td>
+							</tr>
+							<tr>
+								<td>Alt-Backspace</td>
+								<td>Command-Backspace</td>
+								<td>Remove to linestart</td>
+							</tr>
+							<tr>
+								<td>Ctrl-Backspace</td>
+								<td>Option-Backspace, Ctrl-Option-Backspace</td>
+								<td>Remove word left</td>
+							</tr>
+							<tr>
+								<td>Ctrl-Delete</td>
+								<td>Option-Delete</td>
+								<td>Remove word right</td>
+							</tr>
+							<tr>
+								<td>Ctrl-F</td>
+								<td>Command-F</td>
+								<td>Find</td>
+							</tr>
+							<tr>
+								<td>Ctrl-H</td>
+								<td>Command-Option-F</td>
+								<td>Replace</td>
+							</tr>
+							<tr>
+								<td>Ctrl-K</td>
+								<td>Command-G</td>
+								<td>Find next</td>
+							</tr>
+							<tr>
+								<td>Ctrl-Shift-K</td>
+								<td>Command-Shift-G</td>
+								<td>Find previous</td>
+							</tr>
+							<tr>
+								<td>Tab</td>
+								<td>Tab</td>
+								<td>Indent</td>
+							</tr>
+							<tr>
+								<td>Shift-Tab</td>
+								<td>Shift-Tab</td>
+								<td>Outdent</td>
+							</tr>
+							<tr>
+								<td>Ctrl-Z</td>
+								<td>Command-Z</td>
+								<td>undo</td>
+							</tr>
+							<tr>
+								<td>Ctrl-Shift-Z, Ctrl-Y</td>
+								<td>Command-Shift-Z, Command-Y</td>
+								<td>Redo</td>
+							</tr>
+							<tr>
+								<td>Ctrl-/</td>
+								<td>Command-/</td>
+								<td>Toggle comment</td>
+							</tr>
+							<tr>
+								<td>Ctrl-T</td>
+								<td>Ctrl-T</td>
+								<td>Transpose letters</td>
+							</tr>
+							<tr>
+								<td>Ctrl-Enter</td>
+								<td>Command-Enter</td>
+								<td>Enter full screen</td>
+							</tr>
+							<tr>
+								<td>Ctrl-Shift-U</td>
+								<td>Ctrl-Shift-U</td>
+								<td>Change to lower case</td>
+							</tr>
+							<tr>
+								<td>Ctrl-U</td>
+								<td>Ctrl-U</td>
+								<td>Change to upper case</td>
+							</tr>
+							<tr>
+								<td>Insert</td>
+								<td>Insert</td>
+								<td>Overwrite</td>
+							</tr>
+							<tr>
+								<td>Ctrl-Shift-E</td>
+								<td>Command-Shift-E</td>
+								<td>Macros replay</td>
+							</tr>
+							<tr>
+								<td>Ctrl-F</td>
+								<td>Command-F</td>
+								<td>Find</td>
+							</tr>
+							<tr>
+								<td>Ctrl-H</td>
+								<td>Command-Option-F</td>
+								<td>Replace</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<form action="https://www.techgig.com/download_user_code.php"
+		method="post" id="download_user_code" target="_blank">
+		<input type="hidden" id="code_extension" name="code_extension"
+			value=""> <input type="hidden" id="candidate_code"
+			name="candidate_code" value=""> <input type="hidden"
+			id="code_execute" name="code_execute" value="1"> <input
+			type="hidden" id="auto_submit_code" value="N">
+	</form>
+	<input type="hidden" name="test_action_url" id="test_action_url"
+		value="https://www.techgig.com/challenge/question/amazon-prime-video-challenge">
+	<input type="hidden" name="season_id" id="season_id" value="10673">
+	<input type="hidden" name="attempt_id" id="attempt_id" value="4532897">
+	<!-- Modal Create Buffer -->
+	<div class="modal fade" id="create-buffer" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+					<h4 class="modal-title" id="myModalLabel">
+						Fork Buffer #<span class="buffer-cnt"></span>
+					</h4>
+				</div>
+				<div class="modal-body">
+					<p>past buffers are marked read only, you wont be able to edit
+						your current buffer without forking it</p>
+					<a href="javascript:void(0)"
+						onclick="Tg_ChallengeDetailPage.showBufferCode('E');"
+						class="btn button5">Fork Buffer #<span class="buffer-cnt"></span></a>
+					&nbsp; <a href="javascript:void(0)"
+						onclick="Tg_ChallengeDetailPage.showBufferCode('N');"
+						class="btn button1">Create New Buffer</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /Modal Create Buffer -->
+	<!-- Modal Delete Buffer -->
+	<div class="modal fade" id="delete-buffer-code" tabindex="-1"
+		role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+					<h4 class="modal-title" id="myModalLabel">
+						Delete Buffer #<span class="buffer-cnt"></span>
+					</h4>
+				</div>
+				<div class="modal-body">
+					<p>
+						Are you sure you want to delete Buffer #<span class="buffer-cnt"></span>?
+						This action can’t be undone.
+					</p>
+					<a href="javascript:void(0)"
+						onclick="Tg_ChallengeDetailPage.deleteCurrentBufferCode();"
+						class="btn button1">Yes</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /Modal Delete Buffer -->
+	<script type="text/javascript">var webcam="";var evaluation_type='2';var defaultHeadCode="";var defaultTailCode="";defaultHeadCode="#include <math.h>\n#include <stdio.h>\n#include <string.h>\n#include <stdlib.h>\n#include <assert.h>\n#include <limits.h>\n#include <stdbool.h>\n\n    /*\n     * Complete the function below.\n    */\n";defaultTailCode="\nint main() {\n    int output = 0;\n    int ip1;\n    scanf(\"%d\", &ip1);\n    int ip2;\n    scanf(\"%d\", &ip2);\n    int ip3_size = 0;\n    int ip3_i;\n    scanf(\"%d\\n\", &ip3_size);\n    int ip3[ip3_size];\n    for(ip3_i = 0; ip3_i < ip3_size; ip3_i++) {\n        int ip3_item;\n        scanf(\"%d\", &ip3_item);\n        \n        ip3[ip3_i] = ip3_item;\n    }\n    int ip4_size = 0;\n    int ip4_i;\n    scanf(\"%d\\n\", &ip4_size);\n    char* ip4[ip4_size];\n    for(ip4_i = 0; ip4_i < ip4_size; ip4_i++) {\n        char* ip4_item;\n        ip4_item = (char *)malloc(512000 * sizeof(char));\n        scanf(\"\\n%[^\\n]\",ip4_item);\n        \n        ip4[ip4_i] = ip4_item;\n    }\n    output = prisonEscape(ip1,ip2,ip3_size,ip3,ip4_size,ip4);\n    printf(\"%d\\n\", output);\n    return 0;\n}\n";var defaultCode="    int prisonEscape(int input1,int input2,int input3_size, int* input3,int input4_size, char** input4)\n    {\n        //Write code here\n    }\n";$(document).ready(function(){var default_selected_language='cpp';var defaultLanguage='cpp';var countlines=editor.session.getLength();var attempt_question_cnt="0";var allow_editor_copy_paste="Y";var show_auto_suggestion_box="";var save_auto_interval_time="";var evaluation_type='2';var rating="";var showTab="";var autoSaveTimeIntervalSeconds=webcam?save_auto_interval_time>60?save_auto_interval_time:5:10;var enableAutoSuggestion=show_auto_suggestion_box==='N'?false:true;Tg_ChallengeDetailPage.init(default_selected_language,defaultCode,defaultLanguage,defaultHeadCode,defaultTailCode);if(webcam){$("#attempt_question_cnt").text(attempt_question_cnt);}setInterval(updateUserCode,autoSaveTimeIntervalSeconds*1000);if(allow_editor_copy_paste=='N'){editor_copy_paste_disable();}if(showTab){Tg_CommonFunction.init();Tg_CommonFunction.starRating(rating);}});if(evaluation_type==2){if(!webcam){var headditor=ace.edit('split-editor');var taileditor=ace.edit('split-tail-editor');}}</script>
+</div>
